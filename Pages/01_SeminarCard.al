@@ -84,7 +84,7 @@ page 123456701 "CSD Seminar Card"
             {
                 action("Co&mments")
                 {
-                    RunObject = page "Seminar Comment Sheet";
+                    RunObject = page "CSD Seminar Comment Sheet";
                     RunPageLink = "Table Name" = const (Seminar), "No." = field ("No.");
                     Image = Comment;
                     Promoted = true;
@@ -94,8 +94,4 @@ page 123456701 "CSD Seminar Card"
             }
         }
     }
-}
-
-    var
-        myInt: Integer;
 }
