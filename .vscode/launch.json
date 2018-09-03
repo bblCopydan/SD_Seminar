@@ -4,12 +4,11 @@
         {
             "type": "al",
             "request": "launch",
-            "name": "http://localhost",
+            "name": "localhost",
             "server": "http://localhost",
             "serverInstance": "DynamicsNAV110",
             "authentication": "Windows",
-            "schemaUpdateMode": "Recreate",
-            "startupObjectId": 22
+            "schemaUpdateMode": "Recreate",          
         }
     ]
 }
