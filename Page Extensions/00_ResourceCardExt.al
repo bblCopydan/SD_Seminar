@@ -1,4 +1,11 @@
-pageextension 123456700 "CSD Resource Card Ext" extends "Resource Card"
+pageextension 123456700 "CSD ResourceCardExt" extends "Resource Card"
+// CSD1.00 - 2018-01-01 - D. E. Veloper
+// Chapter 5 - Lab 1-2
+// Added new fields:
+// - Internal/External
+// - Maximum Participants
+// Added new FastTab 
+// Added code to OnOpenPage trigger
 {
     layout
     {
@@ -6,37 +13,33 @@ pageextension 123456700 "CSD Resource Card Ext" extends "Resource Card"
         {
             field("CSD Resource Type"; "CSD Resource Type")
             {
-
             }
             field("CSD Quantity Per Day"; "CSD Quantity Per Day")
             {
-
             }
         }
-        addlast(Content)
+
+        addafter("Personal Data")
         {
-            group("CSD Room")
+
+            group("Room")
             {
-                Caption = 'Room';
-                visible = ShowRoom;
+                Visible = ShowMaxField;
                 field("CSD Maximum Participants"; "CSD Maximum Participants")
                 {
-
+                    
                 }
             }
         }
     }
-    actions
-    {
 
-    }
-    trigger OnAfterGetRecord();
+    trigger OnOpenPage();
     begin
-        ShowRoom := (Type = type::Machine);
+        ShowMaxField := (Type = Type::Machine);
         CurrPage.Update(false);
     end;
 
     var
         [InDataSet]
-        ShowRoom: Boolean;
+        ShowMaxField: Boolean;
 }

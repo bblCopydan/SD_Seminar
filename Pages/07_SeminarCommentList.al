@@ -1,26 +1,27 @@
 page 123456707 "CSD Seminar Comment List"
+// CSD1.00 - 2018-01-01 - D. E. Veloper
+// Chapter 5 - Lab 2-2
 {
-    Caption = 'Seminar Comment Sheet';
+    Caption = 'Seminar Comment List';
     PageType = List;
     SourceTable = "CSD Seminar Comment Line";
-    Editable = false;
+    Editable=false;
+
     layout
     {
         area(content)
         {
             repeater(Group)
             {
-                field(Date; Date)
+                field(Date;Date)
                 {
-
                 }
-                field(Code; Code)
+                field(Code;Code)
                 {
-                    Visible = false;
+                    Visible=false;
                 }
-                field(Comment; Comment)
-                {
-
+                field(Comment;Comment)
+                {    
                 }
             }
         }
